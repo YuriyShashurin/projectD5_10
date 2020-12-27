@@ -1,0 +1,57 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block main %}
+    <div class="col-10 d-flex flex-column main-block-size">
+        <div class="container bg-light card ">
+            <h3 class="h3 mb-4 w-100 card-header">О нас </h3>
+            <div class="row d-flex flex-row flex-wrap">
+                <div class="col-6 about-item">
+                    <h4 class="h4 w-100 mb-4">О приюте</h4>
+                    <p class="ml-3">
+                        "Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt. Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit, sed quia non numquam eius modi tempora incidunt ut labore et dolore magnam aliquam quaerat voluptatem. Ut enim ad minima veniam, quis nostrum exercitationem ullam corporis suscipit laboriosam, nisi ut aliquid ex ea commodi consequatur? Quis autem vel eum iure reprehenderit qui in ea voluptate velit esse quam nihil molestiae consequatur, vel illum qui dolorem eum fugiat quo voluptas nulla pariatur?"
+                    </p>
+
+                </div>
+                <div class="col-6 about-item">
+                    <h4 class="h4 w-100 mb-4">Контакты разработчика</h4>
+                    <div class="ml-3">
+                        <p>Учащийся на курсе "Full-stack веб-разработчик на Python" в онлайн-университете <a href="https://skillfactory.ru">SkillFactory</a> </p>
+                        <div class="d-flex mb-3">
+                            <a href="https://github.com/YuriyShashurin"><img class="mr-3" src="{% static 'Images\github.svg' %}" style="height: 22px; width: 22px" alt='Github'>Мой GitHub</a>
+                        </div>
+                        <div class="d-flex mb-3">
+                            <a href="#"><img class="mr-3" src="{% static 'Images\cloud.svg' %}" style="height: 22px; width: 22px" alt='My Repositories'>Репозиторий проекта на GitHub</a>
+                        </div>
+
+                        <h6>Стак проекта:</h6>
+
+                        <div class="d-flex flex-row mb-3">
+                            <img class="mr-3" src="{% static 'Images\frontend.svg' %}" style="height: 22px; width: 22px" alt='Github'>
+                            <p>Frontend: HTML/CSS, Django </p>
+                        </div>
+                        
+                        <div class="d-flex flex-row mb-3">
+                            <img class="mr-3" src="{% static 'Images\backend.svg' %}" style="height: 22px; width: 22px" alt='Github'>
+                            <p>Backend: Django, Sqlite3 </p>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+            <div class="d-flex flex-column align-items-center mb-3">
+                <div class="contact-line w-90"></div>
+            </div>
+            <div class="map_contact d-flex flex-column justify-content-centre">
+                <h4 class="h4 w-100">Контакты приюта</h4>
+                 <p class="mb-4">
+                     г. Москва, Любая улица д. 1000, оф 2202 </br>
+                     Телефон:  +7-495-111-22-33</br>
+                 </p>
+                 <a class="mb-4" href="mailto:#" >Обратная связь</a></br>
+                <iframe class ='mb-4' src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d48303.8833073481!2d37.589507980859544!3d55.7512387516497!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x46b54a50b315e573%3A0xa886bf5a3d9b2e68!2z0JzQvtGB0LrQvtCy0YHQutC40Lkg0JrRgNC10LzQu9GM!5e0!3m2!1sru!2sru!4v1608752681004!5m2!1sru!2sru" width="100%" height="450" frameborder="0" style="border:0;" allowfullscreen="" aria-hidden="false" tabindex="0"></iframe>
+            </div>
+        </div>
+    </div>
+
+{% endblock %}

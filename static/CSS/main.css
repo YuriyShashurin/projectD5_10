@@ -1,0 +1,172 @@
+.main-wrap {
+    margin-top: 50px;
+}
+
+.main-block-size {
+    min-width: 45%;
+}
+
+.pet-card {
+    min-width: 45%;
+    margin-right: 5%;
+}
+
+.footer-block {
+    width: 100%;
+    height: 10%;
+}
+
+.contact-line {
+	width: 80%;
+	height: 4px;
+	background-color: #FF2D2D;
+	border-color: #FF2D2D;
+	margin: 25px 0;
+}
+
+body {
+    background-color: #F8F9FA;
+}
+
+main {
+    margin: 0 2vw;
+    background-color:#F8F9FA;
+}
+
+.pets-img {
+    max-width: 250px;
+    max-height: 250px;
+}
+
+
+.contact-line-vertical {
+    width: 3px;
+	height: 100%;
+	background-color: #FF2D2D;
+	border-color: #FF2D2D;
+	margin: 0 25px;
+}
+
+li {
+    list-style-type: none;
+}
+
+.li_color {
+    color: #FF2D2D;
+}
+
+.contact-line-blog {
+	width: 80%;
+	height: 4px;
+	background-color: #FF2D2D;
+	border-color: #FF2D2D;
+	margin: 25px 0;
+}
+
+.menu-block-size {
+    min-width: 200px;
+}
+.main-block-size {
+    min-width: 200px;
+}
+
+.footer-wrap-size {
+    min-width: 168px;
+}
+
+.about-item {
+    min-width: 270px;
+}
+
+.desc-text {
+    min-width: 440px;
+}
+
+.pet-photo {
+    min-width: 350px;
+}
+
+@media screen and (max-width: 1236px) {
+    .col-2 {
+        flex: 0 0 80%;
+        max-width: 80%;
+        margin: 0 auto;
+    }
+    .col-10 {
+        flex: 0 0 80%;
+        max-width: 80%;
+        margin: 0 auto;
+    }
+    .main-block-size {
+        min-width: 100%;
+    }
+    .menu-block-size {
+        min-width: 100%;
+    }
+    .justify-content-between {
+        justify-content: center!important
+    }
+    .contact-line {
+        width: 100%;
+    }
+    .pet-card {
+        min-width: 60%;
+        margin: 0 auto;
+        justify-content: center!important;
+    }
+}
+
+@media screen and (max-width: 356px) {
+    .navbar {
+        justify-content: center!important;
+    }
+}
+
+@media screen and (max-width: 382px) {
+    .footer-container {
+        justify-content: center!important;
+    }
+}
+@media screen and (max-width: 382px) {
+    .pets-img {
+        width: 80%;
+        margin: 0 auto;
+    }
+}
+
+@media screen and (max-width: 861px) {
+    .pet-wrapper {
+        justify-content: center!important;
+    }
+    .pet-info {
+        max-width: 80%;
+        margin: 0 auto;
+    }
+}
+
+@media screen and (max-width: 771px) {
+
+    .contact-line-vertical {
+        display: none;
+    }
+    .contact-line-pet-desc {
+        width: 80%;
+        height: 3px;
+        background-color: #FF2D2D;
+        border-color: #FF2D2D;
+        margin: 25px auto;
+    }
+    .contact-line-pet {
+        max-width: 0%;
+        flex: 0 0 0;
+        padding: 0;
+    }
+    .desc-text {
+        min-width: 80%;
+        margin: 25px auto;
+    }
+    .breed-text {
+        min-width: 80%;
+        margin: 25px auto;
+    }
+}

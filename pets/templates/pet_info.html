@@ -1,0 +1,60 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block main %}
+<div class="col-10 d-flex flex-column main-block-size">
+    <div class="w-100"><p class="small">{{ object.type }}/{{ object.nickname }}</p></div>
+    <div class="row mb-3 d-flex flex-wrap pet-wrapper">
+        <div class="col-5 pet-info pet-photo mb-3">
+            <img class="" style="height: 350px; width: 90%" src="{{ object.photo.url }}" alt="{{ object.nickname }}">
+        </div>
+        <div class="col-7 d-flex flex-column pet-info">
+            <div class="d-flex flex-row">
+                <h5 class="h5 mr-3 align-top">{{ object.nickname }}</h5>
+                <form action="/pets/add_like/" method="post" enctype="multipart/form-data">
+                    {% csrf_token %}
+                    <input type="hidden" name="id" value="{{object.id}}" />
+                    <input type="image" src='{% static "Images\like.svg" %}' value="like" style="height: 22px; width: 22px"/>
+                </form>
+                <!-- <button href="#"><img class='' src='{% static "Images\like.svg" %}' style="height: 22px; width: 22px"></a> -->
+                <p class="ml-2">{{ object.like }}</p>
+            </div>
+            <ul class="list-group list-group-flush">
+                <li class="list-group-item mb-2 lead">Животное: {{object.type }} </li>
+                <li class="list-group-item mb-2 lead">Порода: {{object.breed }}</li>
+                <li class="list-group-item mb-2 lead">Пол: {{object.sex }}</li>
+                <li class="list-group-item mb-2 lead">Возраст: {{object.year }}</li>
+                {% if object.vetpasport == True %}
+                <li class="list-group-item mb-2 lead">Наличие вет. паспорта: Да</li>
+                {% else %}
+                <li class="list-group-item mb-2 lead">Наличие вет. паспорта: Нет</li>
+                {% endif %}
+                <li class="list-group-item mb-2 lead">Дата поступления в приют: {{object.date_enter }}</li>
+            </ul>
+        </div>
+    </div>
+    <div class="d-flex flex-column align-items-center mb-3">
+        <div class="contact-line w-90"></div>
+    </div>
+    <div class='row mb-5 d-flex flex-wrap pet-wrapper'>
+        <div class="col-7 desc-text">
+            <h4 class="h4 text-left mb-4">О питомце </h4>
+            <p class="text-left w-100 mb-4">{{ object.description }}</p>
+            <div class="contact-line-pet-desc"></div>
+        </div>
+        <div class="col-1 contact-line-pet">
+            <div class="contact-line-vertical"></div>
+        </div>
+        <div class="col-4 breed-text">
+            <h4 class="h4 text-center mb-4">Описание породы "{{object.breed}}"</h4>
+            <ul class="list-group">
+                <li class=" mb-2 text-center w-100"><h4 class="h4 li_color">Размер: </h4><small class="text-muted font-weight-bold">{{object.breed.size}}</small></li>
+                <li class=" mb-2 text-center w-100"><h4 class="h4 li_color">Цвет: </h4><small class="text-muted font-weight-bold">{{object.breed.color}}</small></li>
+                <li class=" mb-2 text-center w-100"><h4 class="h4 li_color">Средняя продолжительность жизни: </h4><small class="text-muted font-weight-bold">{{object.breed.life}}</small></li>
+            </ul>
+        </div>
+    </div>
+
+</div>
+
+{% endblock %}

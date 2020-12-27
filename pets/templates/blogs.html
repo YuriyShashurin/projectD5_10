@@ -1,0 +1,21 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block main %}
+    <div class="col-10 d-flex flex-column">
+        <div class="card ">
+            <h4 class="card-header">Блог</h4>
+            {% for blog in blogs reversed  %}
+            <div class="card-body">
+                <small>{{blog.date}}</small>
+                <a href="/blog/{{blog.pk}}"><h5 class="card-title">{{blog.title}}</h5></a>
+                <p class="card-text">{{blog.small_decc}}</p>
+                <div class="line d-flex flex-column align-items-center">
+                    <div class="contact-line" class="width: 80%; height: 3px"></div>
+                </div>
+            </div>
+            {% endfor %}
+        </div>
+    </div>
+
+{% endblock %}

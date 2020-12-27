@@ -1,0 +1,60 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block main %}
+    
+
+    <div class="col-10 bg-light main-block-size">
+        <div class="d-flex flex-wrap">
+            {% for pet in pets %}
+            <div class="media pet-card d-flex flex-wrap flex-column ">
+                <div class="d-flex flex-row flex-wrap" style="min-height: 300px;">
+                    <img class="pets-img mr-3 mb-3" src="{{ pet.photo.url }}" alt="{{ pet.nickname }}">
+                    <div class="media-body flex-column">
+                        <a href="/pets/{{ pet.type.slug }}" class="badge badge-secondary font-weight-light">{{ pet.type.type }}</a>
+                        <h5 class="mt-0 mb-3"><a href="/pets/{{ pet.pk }}">{{ pet.nickname }}</a></h5>
+                        {% if pet.sex == 'Мужской' %}
+                        <div class="d-flex flex-row mb-2">
+                            <img class="mr-3" src='{% static "Images\male.svg" %}' style="height: 22px; width: 22px">
+                            <h6>{{ pet.sex }}</h6>                     
+                        </div>
+                        {% else %}
+                        <div class="d-flex flex-row mb-2">
+                            <img class="mr-3" src='{% static "Images\femele.svg" %}' style="height: 22px; width: 22px">
+                            <h6>{{ pet.sex }}</h6>                     
+                        </div>
+                        {% endif %}
+                        <div class="d-flex flex-row mb-2">
+                            <img class="mr-3" src='{% static "Images\age.svg" %}' style="height: 22px; width: 22px">
+                            {% if pet.year == 1 %}
+                            <h6>{{ pet.year }} год</h6>
+                            {% elif pet.year > 4 %}
+                            <h6>{{ pet.year }} лет</h6>
+                            {% else %}
+                            <h6>{{ pet.year }} года</h6>
+                            {% endif %}
+                        </div>
+                        <div class="d-flex flex-row">
+                            {% if pet.type.type == "Коты" %}
+                            <img class="mr-3" src='{{ pet.type.icon.url }}' style="height: 22px; width: 22px">
+                            {% elif pet.type.type == "Собаки" %}
+                            <img class="mr-3" src='{{ pet.type.icon.url }}' style="height: 22px; width: 22px">
+                            {% else %}
+                            <img class="mr-3" src='{{ pet.type.icon.url }}' style="height: 22px; width: 22px"> 
+                            {% endif %}
+                            <h6>{{ pet.breed }}</h6>
+                        </div>
+                        
+                    </div>
+                </div>
+                <div class="contact-line w-100"></div>
+            </div>
+            {% endfor %}
+        </div>
+    </div>
+
+
+
+
+
+{% endblock %}
