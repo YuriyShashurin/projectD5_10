@@ -119,7 +119,7 @@ class Pet (models.Model):
 
 
 class Blog (models.Model):
-    title = models.CharField(max_length= 200, verbose_name='Дата опубликования')
+    title = models.CharField(max_length= 200, verbose_name='Название статьи')
     date = models.DateTimeField(default=timezone.now, verbose_name='Дата опубликования')
     blogpost = models.TextField(verbose_name='Текст сообщения')
     small_decc = models.CharField(max_length = 50, blank=True, verbose_name='Короткий текст сообщения')
