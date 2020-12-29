@@ -85,7 +85,7 @@ class Breed (models.Model):
     animal = models.ForeignKey(Animal, on_delete=models.CASCADE, verbose_name='Тип животного' )
 
     def __str__(self):
-        return self.name
+        return str(self.name)
 
 class Pet (models.Model):
 
@@ -115,7 +115,7 @@ class Pet (models.Model):
     vetpasport = models.BooleanField(default= False,verbose_name='Наличие ветпаспорта у питомца')
 
     def __str__(self):
-        return '{} - {} лет'.format(self.nickname, self.year)
+        return str(self.nickname)
 
 
 class Blog (models.Model):
@@ -136,6 +136,8 @@ class Blog (models.Model):
         self.small_decc = short_text
         super(Blog, self).save(*args, **kwargs)
 
+    def __str__(self):
+        return str(self.title)
 
 
 
