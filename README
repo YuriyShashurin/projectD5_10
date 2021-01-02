@@ -7,3 +7,5 @@
    - Launch: C:/YourFolder/pets_site> env\Scripts\activate.bat
 4. Устанавливаем модули совместимостей pip install -r requirements.txt
 5. запускаем проект python manage.py runserver
+
+Деплой на Heroku https://sheltered-tor-89578.herokuapp.com/
