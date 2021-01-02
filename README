@@ -1,6 +1,6 @@
 Развертывание проекта на локальном устройстве
 В командной строке набираем: 
-1. git clone https://github.com/YuriyShashurin/Project_Pets_shelter.git
+1. git clone https://github.com/YuriyShashurin/projectD5_10.git
 2. Переходим в папку проекта: cd pets_site
 3. Создаем командное окружение и запускаем его
    -python -m venv C:/YourFolder/pets_site/env
